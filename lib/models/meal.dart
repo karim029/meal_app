@@ -26,9 +26,11 @@ class Meal {
     required this.isVegetarian,
     required this.steps,
     required this.title,
+    required this.categories,
   });
 
   final String id;
+  final List<String> categories;
   final String title;
   final String imageUrl;
   final List<String> ingredients;
