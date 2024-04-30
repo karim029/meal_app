@@ -18,7 +18,7 @@ class MealItem extends StatelessWidget {
         meal.complexity.name.substring(1); // used to concatenate the string
   }
 
-  String get AffordabilityText {
+  String get affordabilityText {
     return meal.affordability.name[0].toUpperCase() +
         meal.affordability.name.substring(1); // used to concatenate the string
   }
@@ -90,7 +90,7 @@ class MealItem extends StatelessWidget {
                         width: 12,
                       ),
                       MealItemTrait(
-                        label: AffordabilityText,
+                        label: affordabilityText,
                         icon: Icons.attach_money,
                       ),
                     ],
