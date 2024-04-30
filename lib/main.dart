@@ -7,7 +7,7 @@ final theme = ThemeData(
   useMaterial3: true,
   colorScheme: ColorScheme.fromSeed(
     brightness: Brightness.dark,
-    seedColor: const Color.fromARGB(255, 131, 57, 0),
+    seedColor: Color.fromARGB(255, 0, 221, 255),
   ),
   textTheme: GoogleFonts.latoTextTheme(),
 );

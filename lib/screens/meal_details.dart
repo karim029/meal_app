@@ -20,7 +20,7 @@ class MealDetailsScreen extends StatelessWidget {
             onPressed: () {
               onToggleFavorite(meal);
             },
-            icon: const Icon(Icons.star,color: Color.fromARGB(255, 253, 205, 160),),
+            icon: Icon(Icons.star,color: Theme.of(context).colorScheme.primary,),
           ),
         ],
         title: Text(meal.title),
