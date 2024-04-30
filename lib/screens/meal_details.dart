@@ -1,16 +1,28 @@
 import 'package:flutter/material.dart';
-import 'package:meal_app/main.dart';
 import 'package:meal_app/models/meal.dart';
 
 class MealDetailsScreen extends StatelessWidget {
-  const MealDetailsScreen({required this.meal, super.key});
+  const MealDetailsScreen({
+    required this.meal,
+    required this.onToggleFavorite,
+    super.key,
+  });
 
   final Meal meal;
+  final void Function(Meal meal) onToggleFavorite;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        actions: [
+          IconButton(
+            onPressed: () {
+              onToggleFavorite(meal);
+            },
+            icon: const Icon(Icons.star,color: Color.fromARGB(255, 253, 205, 160),),
+          ),
+        ],
         title: Text(meal.title),
       ),
       body: SingleChildScrollView(
@@ -57,7 +69,8 @@ class MealDetailsScreen extends StatelessWidget {
             ),
             for (final step in meal.steps)
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal:12, vertical: 8 ),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
                 child: Text(
                   step,
                   textAlign: TextAlign.center,
