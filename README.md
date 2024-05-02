@@ -1,4 +1,3 @@
-```markdown
 # Meal App
 
 A simple Flutter app that allows users to browse and filter meals based on dietary restrictions. The app uses Riverpod for state management and Google Fonts for custom fonts.
