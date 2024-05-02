@@ -50,6 +50,7 @@ class _TabsScreenState extends ConsumerState<TabsScreen> {
     //setup a listner for the meals provider
   
     final availableMeals = ref.watch(filteredMealsProvider);
+    
 
     Widget activePage = CategoriesScreen(
       availableMeals: availableMeals,

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:meal_app/models/meal.dart';
 import 'package:meal_app/providers/favorites_provider.dart';
@@ -14,6 +13,7 @@ class MealDetailsScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+
     final favoriteMeals = ref.watch(favoriteMealsProvider);
     final isFavorite = favoriteMeals.contains(meal);
 
@@ -43,7 +43,6 @@ class MealDetailsScreen extends ConsumerWidget {
                 color: Theme.of(context).colorScheme.primary,
                 key: ValueKey(isFavorite),
               ),
-            ),
           ),
         ],
         title: Text(meal.title),
